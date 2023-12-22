@@ -19,12 +19,12 @@ const TodoForm = () => {
   }, [])
   
   return (
-    <form autoComplete="off" onSubmit={addTodo}>
+    <form autoComplete="off" onSubmit={addTodo} className="flex w-full h-10 mt-5 gap-2">
       <input type="text" name="todos" id="todos" ref={todoInput}
-      required placeholder="Add a new task" value={todoName}
-      onChange={e => setTodoName(e.target.value)} />
+      required placeholder="What to do..." value={todoName}
+      onChange={e => setTodoName(e.target.value)} className="h-full flex-8 px-2 rounded-lg text-sm outline-none"/>
 
-      <button type="submit"> Create <CiCirclePlus size={16} /> </button>
+      <button type="submit" className="flex h-full flex-1 rounded-lg text-sm items-center gap-x-1.5 bg-purple-600 border-purple-600 text-white"> Add <CiCirclePlus size={16} /> </button>
     </form>
   );
 }

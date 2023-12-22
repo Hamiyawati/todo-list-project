@@ -32,7 +32,7 @@ function TodoItem({ todo, id, checkComplete, handleEditTodos, handleRemoveTodos 
   if(onEdit){
     return (
       <li>
-        <input type="text" id="editValue" value={editValue} name="editValue"
+        <input className="edit-todo" type="text" id="editValue" value={editValue} name="editValue"
           onChange={(e) => setEditValue(e.target.value)}
           onBlur={handleSave}
           onKeyDown={handleKeyDown} autoFocus />
@@ -41,7 +41,7 @@ function TodoItem({ todo, id, checkComplete, handleEditTodos, handleRemoveTodos 
   }else{
     return (
       <div>
-        <li>
+        <li className="">
           <label htmlFor={id} className={todo.complete ? "active" : ""}>
           <input type="checkbox" id={id} checked={todo.complete} 
             onChange={() => checkComplete(id)} />
@@ -49,13 +49,15 @@ function TodoItem({ todo, id, checkComplete, handleEditTodos, handleRemoveTodos 
           </label>
           <div>
             <button disabled={todo.complete} onClick={handleOnEdit}> <FaEdit size={16}/> </button>
-            <button disabled={todo.complete} onClick={handleRemove}> <IoTrashSharp size={16}/> </button>
+            <button onClick={handleRemove}> <IoTrashSharp size={16}/> </button>
           </div>
         </li>
       </div>
     )
   }
 }
+
+
 
 export default TodoItem;
 

@@ -4,71 +4,71 @@
 
 * {
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   font-weight: 500;
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 .App{
   max-width: 500px;
   width: 100%;
-  min-height: 400px;
-  /* box-shadow: 0 2px 6px #555; */
   margin: 20px auto;
   padding: 50px;
 }
 
 h1 {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 900;
-  color: #666;
+  /* text-align: center; */
+  letter-spacing: 10px;
+  /* font-size: 38px;
+  font-weight: 900; */
+  color: #6F61C0;
+  /* margin-bottom: 2rem; */
 }
 
 form{
-  width: 100%;
-  height: 40px;
+  /* width: 100%;
+  height: 40px; */
   margin: 20px 0;
-  display: flex;
-  gap: 8px;
+  /* display: flex; */
+  /* gap: 8px; */
 }
 
 form input,
 form button {
-  height: 100%;
-  flex: 6;
+  /* height: 100%; */
+  flex: 8;
   padding: 0 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid #B2A4FF;
+  /* border-radius: 8px; */
   font-size: 14px;
-  outline: none;
+  /* outline: none; */
 }
 
 form button{
-  flex: 1;
-  background: #555;
+  /* flex: 1; */
   color: white;
-  /* letter-spacing: 2px; */
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  /* background: none;
-  border: none;
-  cursor: pointer; */
+  background: #6F61C0;
+  /* display: flex; */
+  /* align-items: center; */
+  /* gap: 6px; */
+  cursor: pointer;
 }
 
 ul li{
   list-style: none;
-  border: 1px solid #ccc;
+  background: #b2a4ffd3;
   border-radius: 8px;
   margin: 10px 0;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: capitalize;
 }
 
 ul li .active {
@@ -84,12 +84,6 @@ ul li input,
 
 ul li button,
 .row button {
-  /* border: none;
-  border-radius: 8px;
-  outline: none;
-  color: white;
-  background: orange;
-  padding: 5px 15px; */
   padding: 5px 4px;
   border: none;
   background: none;
@@ -105,11 +99,16 @@ ul li button:disabled{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .row #delete {
-  background: crimson;
+  height: 32px;
+  padding: 5px 15px;
+  border-radius: 8px;
+  background: #ffbe69;
+  color: maroon;
+  font-size: 14px;
 }
 
 label {
@@ -121,9 +120,32 @@ h2{
   font-size: 18px;
 }
 
+.filter button{
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  color: white;
+  background: #9e9b9bce;
+  padding: 5px 15px;
+  margin-right: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: .5rem;
+  font-size: 14px;
+}
+
+.filter button:hover{
+  background: #FFB4B4;
+}
+
+.edit-todo {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 14px;
+}
+
 @media (max-width: 400px) {
   .App {
-    padding: 10px;
-    overflow-x: hidden;
+    padding: 20px;
   }
 }
