@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import TodoItem from './TodoItem';
 import { TodoContext } from '../context/TodoContext';
 
-function TodoList() {
+const TodoList = () => {
   const [todos, setTodos] = useContext(TodoContext);
   
   const switchComplete = id =>{

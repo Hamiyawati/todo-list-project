@@ -5,7 +5,7 @@ import TodoFooter from "./components/TodoFooter";
 import TodoFilter from "./components/TodoFilter";
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1 className="text-center tracking-widest text-4xl font-extrabold mb-8">TODO</h1>
@@ -14,7 +14,7 @@ function App() {
       <TodoList />
       <TodoFooter />
     </div>
-  );
+  )
 }
 
 export default App;

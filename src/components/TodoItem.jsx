@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaEdit } from 'react-icons/fa';
 import { IoTrashSharp } from 'react-icons/io5';
 
-function TodoItem({ todo, id, checkComplete, handleEditTodos, handleRemoveTodos }) {
+const TodoItem = ({ todo, id, checkComplete, handleEditTodos, handleRemoveTodos }) => {
   const [onEdit, setOnEdit] = useState(false);
   const [editValue, setEditValue] = useState(todo.name);
 
